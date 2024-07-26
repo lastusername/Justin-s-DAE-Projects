@@ -1,5 +1,8 @@
 body{
 margin: 0px;
+min-height: 100vh;
+display: flex;
+flex-direction: column;
 }
 nav ul{
     margin-top: 0;
@@ -21,4 +24,13 @@ nav a {
 }
 nav li:hover {
     background-color: orange;
+}
+h1 {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+footer{
+    text-align: center;
+    background-color: rgb(30, 101, 253);
+    padding: 1em;
+    margin-top: auto;
 }
