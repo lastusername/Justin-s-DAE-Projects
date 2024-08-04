@@ -18,5 +18,23 @@
     </nav>
 </header>
     <h1>Second page</h1>
+
+    <?php 
+
+function decVar () {
+    $name = "justin";
+    $num = 15;
+    $boolean = true;
+}
+$name = "justin";
+$num = 15;
+$boolean = true;
+
+$list = array($name, $num, $boolean);
+echo("First of the array " . $list[0] . ". ");
+echo("Second of the array " . $list[1] . ". ");
+echo("Third of the array " . $list[2] . ". ");
+?>
+
 </body>
 </html>

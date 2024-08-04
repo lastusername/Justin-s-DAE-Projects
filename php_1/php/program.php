@@ -1,31 +1,15 @@
-<?php 
 
-function decVar () {
-    $name = "justin";
-    $num = 15;
-    $boolean = true;
+<?php
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Retrieve data from POST request
+    $username = $_POST['user'];
+    $password = $_POST['pass'];
+
+    // Process the data (e.g., validate, store in database, etc.)
+    // For demonstration, let's just return the data
+    echo "Received username: " . htmlspecialchars($username) . "<br>";
+    echo "Received password: " . htmlspecialchars($password);
+} else {
+    echo "Invalid request method.";
 }
-$name = "justin";
-$num = 15;
-$boolean = true;
-/*
-line 14 code
-if ($usrChoice !== 4 || $userChoice !== 2) {
-    return "You made an error, please try again";
-    } else {
-        return "good job, you got it right!";
-    */
-
-
-function Credentials () {
-    $usr = $_POST['user'];
-    $pass = $_POST['pass'];
-    if (!$usr || !$pass ) {
-
-        return  "Missing fields";
-    }else {
-        return "valid";
-    } 
-    }
-
-?> 
+?>
