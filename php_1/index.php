@@ -35,7 +35,7 @@
             <!-- AJAX response will be displayed here -->
         </div>
     </main>
-    <?php echo "Hello, I wrote this with PHP. I concatenated this sentence"; ?>
+    <?php echo "Hello, I wrote this with PHP." ?>
     <script src="javascript/formHandler.js"></script>
     <footer><p>Footer tag</p></footer>
 </body>
