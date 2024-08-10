@@ -1,7 +1,14 @@
-.entNum2 {
-    align-self: center;
+.Circle {
+    display: flex;
+    flex-direction: column-reverse;
+    
 }
-.Submit_Text_Div{
-    margin-left: 50%;
-    margin-right:50%; 
+.flexy {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.footer1 {
+    display: flex;
+    justify-content: flex-end;
+    
 }
