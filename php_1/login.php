@@ -14,12 +14,11 @@
     <nav>
         <ul>
             <li><a href="index.php">Home</a></li>
-            <li><a href="Sign_Up.php">Sign Up</a></li>
-            <li><a href="login.php">Login Up</a></li>
+            <?php include_once 'php/nav.php'; navSULI(); ?>
         </ul>
     </nav>
 </header>
-    <h1>Sign Up page</h1>
+    <h1>Login page</h1>
 
     <div class="Submit_Text_Div">
             <form method="POST" name="form" id="myForm">
