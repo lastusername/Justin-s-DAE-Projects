@@ -3,7 +3,8 @@ include_once 'program.php';
 
 
 function navSULI(){
-    if (!isset($Authorized)|| $Authorized !== true) {
+    // !isset($Authorized)||
+    if (!isset($_SESSION['Authorized']) || $_SESSION['Authorized'] !== true) {
 echo '<li><a href="Sign_Up.php">Sign Up</a></li>
 <li><a href="login.php">Login</a></li>'; }
 else {

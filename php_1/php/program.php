@@ -41,9 +41,9 @@ function InDatabaseCheck($user1, $pass1) {
         $result = $stmt->get_result();
 
   if ($result->num_rows < 1) {
-    return false;
+    return false; //if no results show up, return false
   } else {
-    return true;
+    return true; //if results show, retrun true
   }
   $stmt->close();
   $conn->close();
@@ -52,11 +52,11 @@ function login() {
   
   $username = $_POST['user1'] ?? '';
   $password = $_POST['pass1'] ?? '';
-  $InDB = InDatabaseCheck($username, $password);
-  if ($InDB == false) {
+  $InDB = InDatabaseCheck($username, $password); //checks if its in the database
+  if ($InDB == true) { //if its  in the database
     echo "Welcome!";
     return true;
-  } elseif ($InDB == true) {
+  } elseif ($InDB == false) { //if its not in the database, it is invalid
     echo "Invalid Credentials";
     return false;
   }else {
@@ -77,15 +77,16 @@ function StartDatabase () {
  }
   
 }
-
+session_start();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 $action = $_POST['action'] ?? '';
 if ($action === 'signup') {
-  SignUp();
+  SignUp(); //checks if it's in the databse and then created user
 } elseif  ($action === 'login') {
   global $Authorized;
-  $Authorized = login();
+  $Authorized = login(); //checks if user is in db, returns true or false
+   $_SESSION['Authorized'] = $Authorized;
 } else {
     echo "Invalid request method.";
     

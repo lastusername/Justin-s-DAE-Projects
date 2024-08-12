@@ -14,7 +14,7 @@
     <nav>
         <ul>
             <li><a href="index.php">Home</a></li>
-            <?php include_once 'php/nav.php'; navSULI(); ?>
+            <?php include 'nav.php'; navSULI(); ?>
         </ul>
     </nav>
 </header>
