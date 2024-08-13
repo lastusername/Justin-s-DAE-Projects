@@ -10,11 +10,11 @@
 </head>
 
 <body> 
-<header>
+<header> 
     <nav>
-        <ul>
-            <li><a href="index.php">Home</a></li>
-            <?php include 'nav.php'; navSULI(); ?>
+        <ul id="NavSignLog">
+            
+           
         </ul>
     </nav>
 </header>
@@ -35,6 +35,7 @@
     </main>
     <?php echo "Hello, I wrote this with PHP. I concatenated this sentence"; ?>
     <script src="javascript/formHandler.js"></script>
+    <script src="javascript/nav.js">document.getElementBzyId('NavSignLog').innerHTML = NavSULI()</script>
 
 </body>
 </html>

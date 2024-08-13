@@ -1,4 +1,3 @@
-
 <?php
 function SignUp() {
     // Retrieve data from POST request
@@ -29,9 +28,6 @@ function SignUp() {
     
 }
 function InDatabaseCheck($user1, $pass1) {
-  
-  
-
   $conn = StartDatabase();
 
   $sql = "SELECT Email, Passwords FROM User WHERE Email = ? AND Passwords = ?";
@@ -41,22 +37,21 @@ function InDatabaseCheck($user1, $pass1) {
         $result = $stmt->get_result();
 
   if ($result->num_rows < 1) {
-    return false; //if no results show up, return false
+    return false;
   } else {
-    return true; //if results show, retrun true
+    return true;
   }
   $stmt->close();
   $conn->close();
 }
 function login() {
-  
   $username = $_POST['user1'] ?? '';
   $password = $_POST['pass1'] ?? '';
-  $InDB = InDatabaseCheck($username, $password); //checks if its in the database
-  if ($InDB == true) { //if its  in the database
+  $InDB = InDatabaseCheck($username, $password);
+  if ($InDB == true) {
     echo "Welcome!";
     return true;
-  } elseif ($InDB == false) { //if its not in the database, it is invalid
+  } elseif ($InDB == false) {
     echo "Invalid Credentials";
     return false;
   }else {
@@ -77,19 +72,21 @@ function StartDatabase () {
  }
   
 }
-session_start();
+
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 $action = $_POST['action'] ?? '';
 if ($action === 'signup') {
-  SignUp(); //checks if it's in the databse and then created user
+  SignUp();
 } elseif  ($action === 'login') {
   global $Authorized;
-  $Authorized = login(); //checks if user is in db, returns true or false
-   $_SESSION['Authorized'] = $Authorized;
+  $Authorized = login();
+  echo json_encode($Authorized);
+
 } else {
     echo "Invalid request method.";
     
+
 }
 }
 ?>

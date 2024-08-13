@@ -1,8 +1,8 @@
 body{
-margin: 0px;
-min-height: 100vh;
-display: flex;
-flex-direction: column;
+    margin: 0px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 nav ul{
     margin-top: 0;
