@@ -19,8 +19,6 @@ function SignUp() {
        $sql->close();
        $conn->close();
       // For demonstration, let's just return the data
-
-      
     }
     else {
       echo "User already exist";
@@ -51,12 +49,13 @@ function login() {
   if ($InDB == true) {
     echo "Welcome!";
     return true;
-  } elseif ($InDB == false) {
-    echo "Invalid Credentials";
+  }
+  /* elseif ($InDB == false) {
+    echo "Invalid ";
     return false;
   }else {
     echo "unknown error, line ##";
-  }
+  }  */
 }
 function StartDatabase () {
   $dbhost = 'localhost';
@@ -79,14 +78,12 @@ $action = $_POST['action'] ?? '';
 if ($action === 'signup') {
   SignUp();
 } elseif  ($action === 'login') {
-  global $Authorized;
   $Authorized = login();
-  echo json_encode($Authorized);
+  echo $Authorized ? 'authorized' : 'unauthorized';
+
 
 } else {
     echo "Invalid request method.";
-    
-
 }
 }
 ?>
