@@ -1,0 +1,15 @@
+.Circle {
+    display: flex;
+    flex-direction: column-reverse;
+    
+}
+.flexy {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.footer1 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    
+}
