@@ -28,6 +28,8 @@
         <input type="hidden" name="action" value="update">
         <input type="text" placeholder="Enter a username" name="user3" required>
         <input type="password" placeholder="Enter a Password" name="pass3" required>
+        <input type="text" placeholder="Enter a username" name="user3" required>
+        <input type="password" placeholder="Enter a Password" name="pass3" required>
         <input type="submit" value="Submit">
     </form>
 </div>
