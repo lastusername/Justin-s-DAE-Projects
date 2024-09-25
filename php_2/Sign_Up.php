@@ -16,6 +16,7 @@
             <li><a href="index.php">Home</a></li>
             <li><a href="Sign_Up.php">Sign Up</a></li>
             <li><a href="login.php">Login</a></li>
+            <li><a href="delete.php">delete</a></li>
         </ul>
     </nav>
 </header>
