@@ -12,7 +12,7 @@ function updateNav() {
             'action': 'login'
         })
     })
-    
+
     .then(response => response.text())  // Get the response as plain text
     .then(data => {
         userStatus = data;  // This will be 'authorized' or 'unauthorized'
