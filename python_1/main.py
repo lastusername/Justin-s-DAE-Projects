@@ -11,6 +11,6 @@ if UsrChoice.lower() == "y":
     input("Great! go ahead!")
 else:
     print("Alright")
-print("Well it didn't matter anyway. The game is guess the number")
+print("Well it didn't matter anyway. The game is guess the number. THe rules of the game are simple. You chose the a low number and a high number. I then chose a random number and then you have to guess which one it is. I'll give hints if you want")
 
 
