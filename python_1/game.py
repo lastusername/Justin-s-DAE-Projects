@@ -1,27 +1,22 @@
 import random
 
-def tryAgain():
-    UsrChoice = input("An error occured with your input, would you like to try again?")
+def YesNo(UsrChoice):
     if UsrChoice.lower() == "y":
             print("Alright!")
     else:
             print("Alright")
             Valid = False
-
-
-
-
-
-
 Valid = True
 while (Valid):
     try:
-        highVar = int(input("What is your high variable?"))
         lowVar = int(input("What is your low variable?"))
+        highVar = int(input("What is your high variable?"))
+        botNum = random.randint(lowVar, highVar)
         Valid = False
     except:
-        tryAgain()
-botNum = random.randint(lowVar, highVar)
+        UsrChoice = input("An error occured with your input, would you like to try again?")
+        YesNo(UsrChoice)
+
 
 Valid = True
 while (Valid):
@@ -34,5 +29,6 @@ while (Valid):
             print("You didn't get it, try again")
             Valid = True
     except:
-        tryAgain()
+        UsrChoice = input("An error occured with your input, would you like to try again?")
+        YesNo(UsrChoice)
     
