@@ -1,6 +1,6 @@
 import random
 
-def YesNo(UsrChoice):
+def YesNo(UsrChoice): #checks if user says yes
     Valid = True
     if UsrChoice.lower() == "y":
             print("Alright!")
@@ -9,9 +9,9 @@ def YesNo(UsrChoice):
             print("Alright")
             Valid = False
             return Valid
-def game():
+def game(): #main component function
     Valid = True
-    while (Valid):
+    while (Valid): #checks for the low and high variable
         try:
             lowVar = int(input("What is your low variable?"))
             highVar = int(input("What is your high variable?"))
@@ -23,7 +23,7 @@ def game():
 
 
     Valid = True
-    while (Valid):
+    while (Valid): #process of asking user to guess what the number is
         try:
             Var = int(input("Guess a number between " + str(lowVar) + " through " + str(highVar) + "?"))
             Valid = False
