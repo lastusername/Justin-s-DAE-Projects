@@ -8,7 +8,7 @@ function App() {
       <Nav />
       <Card Name = "Justin" Work="SWE"/>
       <Card Name = "Kay" Work="PHP Demon"/>
-      <Card Name = "Hello"Work= "Greetings"/>
+      <Card Name = "Hello"Work= "Greetings" pgf=""/>
     </div>
   );
 }
