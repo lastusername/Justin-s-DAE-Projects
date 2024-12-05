@@ -1,4 +1,4 @@
-import "../componentsCSS/nav.css";
+import "./componentsCSS/nav.css";
 
 function Card(cardP){
     return (
