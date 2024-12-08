@@ -17,7 +17,7 @@ function Card(cardP){
     }
 
     return (
-        <div classNmae="Card">
+        <div className="Card">
             <h1>{cardP.Work} </h1>
             <p>{cardP.Name}</p>
             <img>{cardP.pfp}</img>
