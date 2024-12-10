@@ -1,12 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import Card from './components/Card'
 import Nav from './components/nav'
-import { Link, Routes, route } from 'react-router-dom';
+import { Link, Routes, Route } from 'react-router-dom';
 import React from 'react';
 import Banner from './components/Banner';
 import Join from './components/JoinPop';
-
+import Profile from './Pages/Profile';
 
 
 
@@ -37,11 +36,9 @@ function App() {
   return (
     <div className="App">
       <Nav />
-      <Banner slides={slides} />
-      <Card Name = "Justin" Work="SWE"/>
-      <Card Name = "Kay" Work="PHP Guy"/>
-      <Card Name = "Hello"Work= "Greetings" pgf=""/>
-      <Join/>
+     
+
+
     </div>
   );
 }
