@@ -20,4 +20,4 @@ export function UserAuthContextProvider({ children }) {
 
 export default useUserAuth() {
     return useContext(userAuthContext)
-}
+} 
