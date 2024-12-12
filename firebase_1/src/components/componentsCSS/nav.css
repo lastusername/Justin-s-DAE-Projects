@@ -1,0 +1,77 @@
+* {
+    margin:0px;
+    padding:0px;
+}
+
+.title {
+font-size:xxx-large;
+display: flex;
+align-self: center;
+justify-content: start;
+
+
+}
+li {
+    list-style: none;
+    display: inline;
+    padding-right: 2rem;
+    font-size: x-large;
+}
+.Card {
+    border: solid black 3px;
+
+}
+nav {
+    border: solid black 3px;
+    background: cornflowerblue;
+}
+.banner {
+    display: flex;
+    justify-content: center;
+}
+.LogonPages {
+    display: flex;
+
+}
+img {
+    width:120px;
+    display:flex;
+    
+}
+.title, .LogonPages {
+    margin-right: auto;
+}
+
+.Pages {
+    display: flex;
+    align-items: flex-end;
+}
+.link-style {
+    list-style: none;
+    display: inline;
+    padding-right: 2rem;
+    font-size: x-large;
+    color: black;
+    text-decoration:none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
