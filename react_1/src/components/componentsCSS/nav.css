@@ -46,3 +46,32 @@ img {
     display: flex;
     align-items: flex-end;
 }
+.link-style {
+    list-style: none;
+    display: inline;
+    padding-right: 2rem;
+    font-size: x-large;
+    color: black;
+    text-decoration:none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
