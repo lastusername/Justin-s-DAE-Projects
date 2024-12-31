@@ -1,10 +1,13 @@
-function About(){
+import { useUserAuth } from "../Context/UserAuthContext";
+
+function Profile(){
     return(
         <div>
-            <h1>About Page</h1>
+            <h1>Profile Page</h1>
+            <p>User Email:</p>
         </div>
     )
 }
 
 
-export default About;
+export default Profile;

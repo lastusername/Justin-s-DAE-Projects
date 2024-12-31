@@ -1,12 +1,31 @@
  import '../PagesCSS/sign.css';
  import { useState } from 'react';
- import { Link, Routes, Route } from 'react-router-dom';
-
+ import { Link, Routes, Route, useNavigate } from 'react-router-dom';
+ import {useUserAuth} from "../Context/UserAuthContext"
  
  function SignUp() {
+  const {signUp} = useUserAuth
+
   let [email, setEmail] = useState("")
   let [password, setPassword] = useState("")
   let [name, setName] = useState("")
+  let [error, setError] = useState("")
+  const Navigate = useNavigate();
+
+  const handleSubmit = async (e) => {
+  e.preventDefault()
+    try {
+      await signUp(email, password)
+      Navigate("/Home")
+    } catch (err) {
+      setError(err.message);
+      console.log(error)
+    }
+
+
+
+}
+
 
     return (
       <div className="login-container">
@@ -21,7 +40,7 @@
         </h2>
       </div>
       <div className="login-form-container">
-        <form action="#" method="POST" className="login-form">
+        <form onSubmit={handleSubmit} method="POST" className="login-form">
         <div className="form-group">
             <label htmlFor="email">
               Name

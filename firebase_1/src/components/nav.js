@@ -4,6 +4,7 @@ import SignUp from '../Pages/SignUp';
 import SignIn from '../Pages/SignIn';
 import { Link, Routes, Route } from 'react-router-dom';
 import './componentsCSS/nav.css';
+import UserAuthContextProvider from '../Context/UserAuthContext';
 
 
 function Nav () {
@@ -29,12 +30,14 @@ return (
         </nav>
         </header>
     <main>
+      <UserAuthContextProvider>
       <Routes>
         <Route path="/Home" element={<Home />} />
         <Route path="/About" element={<About />} />
         <Route path="/SignIn" element={<SignIn />} />
         <Route path="/SignUp" element={<SignUp />} />
       </Routes>
+      </UserAuthContextProvider> 
     </main>
     </>
 )
