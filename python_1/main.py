@@ -11,7 +11,7 @@ if UsrChoice.lower() == "y": #if user wants to continue, we allow them
     input("Great! go ahead!")
 else:
     print("Alright")  #if user says no, then 
-print("Well it didn't matter anyway. The game is guess the number. THe rules of the game are simple. You chose the a low number and a high number. I then chose a random number and then you have to guess which one it is. I'll give hints if you want")
+print("Well it didn't matter anyway. The game is guess the number.\nThe rules of the game are simple. You chose the a low number and a high number. \nI then chose a random number and then you have to guess which one it is.\nI'll give hints if you want")
 
 Valid = True
 while (Valid): # create a while loop for if the user wants to play again
